@@ -327,6 +327,21 @@ class Solution:
         # Reverse the rest of the elements
         nums[k:] = reversed(nums[k:])
 
+#268. Missing Number
+
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        # Calculate the expected sum of the first n natural numbers
+        n = len(nums)
+        expected_sum = n * (n + 1) // 2
+        
+        # Calculate the actual sum of the array
+        actual_sum = sum(nums)
+        
+        # The missing number is the difference between the expected and actual sums
+        return expected_sum - actual_sum
+
+
 
 
 
